@@ -1,98 +1,186 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edlan Carvalho: Designer e Desenvolvedor Front End</title>
-    <link rel="stylesheet" href="./styles/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edlan Carvalho | Designer & Dev Front-End</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="styles/style.css" />
+  <meta name="description" content="Portfólio de Edlan Carvalho — design + front-end com foco em acessibilidade e performance."/>
 </head>
-
 <body>
-    <header>
-        <nav>
-            <div>
-                <a href="">Edlan Carvalho</a>
-            </div>
-            <div class="nav_links">
-                <a class="nav_links" href="">Projetos</a>
-                <a class="nav_links" href="">Sobre</a>
-                <a class="nav_links" href="">Contato</a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="banner">
-            <div>
-                <h1>Designer e Desenvolvedor Front-End</h1>
-                <div class="banner_buttons">
-                    <a href="">Ver Portifólio</a>
-                    <a href="">Contato</a>
-                </div>
-            </div>
-            <img src="" alt="Foto do Edlan">
-        </section>
-        <section class="about">
-            <h2>SOBRE</h2>
-            <p>Graduado em Design pela Universidade Federal do Maranhão, com certificação em Desenvolvedor Web pelo
-                SENAC e Desenvolvedor Front-End pelo Programa Trilhas do Governo do Maranhão. Desde 2021, atua como
-                designer freelancer e, a partir de 2024, iniciou sua trajetória na área de desenvolvimento web.</p>
-        </section>
-        <section class="projects">
-            <h2>PROJETOS</h2>
-            <button>Todos</button>
-            <button>Design</button>
-            <button>Dev</button>
-        </section>
-        <section class="hability">
-            <h2>HABILIDADES</h2>
-            <div>
-                <img src="" alt="">
-                <legend></legend>
-            </div>
-            <div>
-                <img src="" alt="">
-                <legend></legend>
-            </div>
-            <div>
-                <img src="" alt="">
-                <legend></legend>
-            </div>
-            <div>
-                <img src="" alt="">
-                <legend></legend>
-            </div>
-            <div>
-                <img src="" alt="">
-                <legend></legend>
-            </div>
-        </section>
-        <section class="contact">
-            <h2>MANDE UMA MENSAGEM</h2>
-            <form action="">
-                <label for="">Nome</label>
-                <input required type="text">
+  <!-- Header -->
+  <header class="navbar">
+    <nav class="container" aria-label="Navegação principal">
+      <a class="brand" href="#">Edlan Carvalho</a>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a class="btn btn-sm" href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-                <label for="">Telefone</label>
-                <input required type="text">
+  <main>
+    <!-- HERO (sem foto) -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="blob"></div>
+      <div class="container hero-content reveal">
+        <h1 id="hero-title">Designer & Desenvolvedor Front-End</h1>
+        <p>Crio experiências digitais <strong>acessíveis</strong>, <strong>funcionais</strong> e com <strong>impacto real</strong>, unindo estética e código.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#projects">Ver Projetos</a>
+          <a class="btn btn-outline" href="#contact">Entrar em contato</a>
+        </div>
+      </div>
+    </section>
 
-                <label for="">Email</label>
-                <input required type="text">
+    <!-- SOBRE -->
+    <section id="about" class="section alt-bg" aria-labelledby="about-title">
+      <div class="container grid-2">
+        <div class="reveal">
+          <h2 id="about-title">Sobre mim</h2>
+          <p>Sou graduado em Design (UFMA), certificado como Desenvolvedor Web (SENAC) e Front-End (Programa Trilhas). Desde 2021, atuo como designer freelancer e, a partir de 2024, iniciei minha trajetória em desenvolvimento web.</p>
+          <p>Meu foco é transformar ideias em interfaces claras e performáticas — do conceito visual à implementação em código.</p>
+        </div>
 
-                <label for="">Messagem</label>
-                <input required type="text">
+        <div class="about-cards reveal">
+          <article class="info-card">
+            <h3>Experiência</h3>
+            <p><strong>3+ anos</strong><br/>criando para a Web</p>
+          </article>
+          <article class="info-card">
+            <h3>Cargo atual</h3>
+            <p><strong>Freelancer</strong><br/>Design & Front-End</p>
+          </article>
+          <article class="info-card">
+            <h3>Foco</h3>
+            <p><strong>UI + Front-End</strong><br/>Acessibilidade & Performance</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-                <input required type="submit">
-            </form>
-        </section>
-    </main>
-    <footer>
-        <h3>Me acompanhe nas redes sociais</h3>
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-    </footer>
+    <!-- PROJETOS -->
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="container reveal">
+        <h2 id="projects-title">Projetos</h2>
+
+        <div class="filters" role="tablist" aria-label="Filtro de projetos">
+          <button class="chip active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+          <button class="chip" data-filter="design" role="tab" aria-selected="false">Design</button>
+          <button class="chip" data-filter="dev" role="tab" aria-selected="false">Dev</button>
+        </div>
+
+        <div class="projects-grid" role="list">
+          <!-- Item -->
+          <article class="card" data-category="design" role="listitem">
+            <div class="card-thumb"></div>
+            <div class="card-body">
+              <h3>Landing Page – Evento Criativo</h3>
+              <p>UI no Figma + protótipo. Foco em hierarquia visual e conversão.</p>
+              <div class="tags"><span>Figma</span><span>UI</span></div>
+              <div class="card-actions">
+                <a href="#" class="link">Ver estudo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="dev" role="listitem">
+            <div class="card-thumb"></div>
+            <div class="card-body">
+              <h3>Dashboard Responsivo</h3>
+              <p>Front-end com boas práticas de acessibilidade e performance.</p>
+              <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+              <div class="card-actions">
+                <a href="#" class="link">Live Demo</a>
+                <a href="#" class="link">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="dev" role="listitem">
+            <div class="card-thumb"></div>
+            <div class="card-body">
+              <h3>Portfolio SPA</h3>
+              <p>Arquitetura simples, rotas e transições suaves.</p>
+              <div class="tags"><span>React</span><span>Vite</span></div>
+              <div class="card-actions">
+                <a href="#" class="link">Live Demo</a>
+                <a href="#" class="link">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="design" role="listitem">
+            <div class="card-thumb"></div>
+            <div class="card-body">
+              <h3>Sistema de Design</h3>
+              <p>Tokens (cores, tipografia, spacing) e componentes padronizados.</p>
+              <div class="tags"><span>Design System</span></div>
+              <div class="card-actions">
+                <a href="#" class="link">Ver estudo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="skills" class="section alt-bg" aria-labelledby="skills-title">
+      <div class="container reveal">
+        <h2 id="skills-title">Habilidades</h2>
+        <ul class="skills" aria-label="Lista de habilidades">
+          <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>React</li>
+          <li>Figma</li><li>Acessibilidade</li><li>Design System</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container grid-2">
+        <div class="reveal">
+          <h2 id="contact-title">Mande uma mensagem</h2>
+          <p>Quer trocar uma ideia, pedir um orçamento ou colaborar? Me chama!</p>
+        </div>
+
+        <form class="contact-form reveal" action="#" method="post">
+          <label for="name">Nome</label>
+          <input id="name" name="name" type="text" required />
+
+          <label for="phone">Telefone</label>
+          <input id="phone" name="phone" type="tel" required />
+
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Edlan Carvalho • Design & Front-End</p>
+      <nav aria-label="Redes sociais" class="socials">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="Behance">Behance</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="scripts/script.js"></script>
 </body>
-
 </html>
